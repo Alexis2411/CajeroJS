@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/minilogo.png" type="image/x-icon">
+</head>
+<body class="w-100 h-100">
+    <nav class="navbar bg-body-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="" srcset=""  height="30px">
+          </a>
+        </div>
+      </nav>
+    <main class="d-flex align-items-center align-content-center py-5 h-75">
+        <section class="form-signin w-100 m-auto bg-body-secondary rounded">
+            <form>
+                <h1 class="h3 mb-3 fw-normal">Accede a tu banco en línea</h1>
+                <div class="form-floating">
+                    <input type="text" class="form-control"  name="username" id="username" placeholder="Nombre de usuario">
+                    <label for="username">Usuario</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="Contraseña">
+                    <label for="pass">Contraseña</label>
+                </div>
+              <button class="btn btn-primary w-100 py-2 my-4" type="button" onclick="iniciarSesion()">Iniciar Sesión</button>
+            </form>
+        </section>   
+    </main>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

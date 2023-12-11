@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="assets/minilogo.png" type="image/x-icon">
+    </head>
+    <body>
+        <nav class="navbar bg-body-secondary">
+            <a class="navbar-brand mx-3" href="index.html">
+                <img src="assets/logo.png" alt srcset height="30px">
+            </a>
+            <ul class="navbar-nav ms-auto mx-3 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Cerrar
+                        Sesión</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <div class="row w-100 mt-5">
+                    <div class="col-12 col-sm-4 d-flex justify-content-center">
+                        <div class="card" style="width: 14rem;">
+                            <img src="assets/depositar (1).png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Añade fondos.</h5>
+                                <input class="form-control my-3" type="number" id="deposito">
+                                <button class="btn btn-primary" type="button" onclick="depositar()">Depositar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 d-flex justify-content-center">
+                        <div class="card" style="width: 14rem;">
+                            <img src="assets/dinero-en-efectivo.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Retira de tu cuenta</h5>
+                                    <input class="form-control my-3" type="number" id="retiro">
+                                <button class="btn btn-primary" type="button" onclick="retirar()">Retirar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 d-flex justify-content-center">
+                        <div class="card" style="width: 14rem;">
+                            <img src="assets/ojo.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Muestra el saldo</h5>
+                                <input class="form-control my-3" disabled type="number" id="saldo" placeholder="****">
+                                <button class="btn btn-primary" type="button" onclick="consultar()"">Mostrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
