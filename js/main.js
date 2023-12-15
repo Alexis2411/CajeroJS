@@ -28,6 +28,10 @@ function iniciarSesion() {
     }
 }
 
+function cerrarSesion() {
+    localStorage.removeItem("id");
+}
+
 function depositar() {
     let monto = parseInt(document.getElementById("deposito").value);
     let saldo = buscar();
@@ -36,9 +40,12 @@ function depositar() {
         if (monto + saldo > 990) {
             alert("No puedes ingresar más de $990 a la vez.");
         } else {
-            alert("Agregaste a tu cuenta: " + monto);
+            alert("Agregaste a tu cuenta: " + monto + " Ahora tienes: " + (monto+saldo));
             modificar(monto, "+");
+            consultar();
         }
+    }else{
+        alert("Ingresa un valor mayor a cero.");
     }
 }
 function retirar() {
@@ -49,9 +56,12 @@ function retirar() {
         if (saldo-monto < 10) {
             alert("No puedes tener menos de $10");
         } else {
-            alert("Retiraste de tu cuenta: "+ monto);
+            alert("Retiraste de tu cuenta: "+ monto + " Ahora tienes: " + (saldo-monto));
             modificar(monto, "-");
+            consultar();
         }
+    }else{
+        alert("Ingresa un valor mayor a cero.");
     }
 }
 
